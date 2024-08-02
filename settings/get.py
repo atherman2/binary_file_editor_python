@@ -9,9 +9,9 @@ def get_paths(core_path: str, paths_obj: Paths):
         while(setting := settings_file.readline()):
             settings_list.append(setting)
         for setting in settings_list:
-            Paths.input = get_key_value_from_string(setting, "input")
-            Paths.output = get_key_value_from_string(setting, "output")
-            Paths.edited = get_key_value_from_string(setting, "edited")
+            paths_obj.input = get_key_value_from_string(setting, "input")
+            paths_obj.output = get_key_value_from_string(setting, "output")
+            paths_obj.edited = get_key_value_from_string(setting, "edited")
 
 def get_key_value_from_string(string, key):
     if string[:len(key)] == key:
