@@ -1,4 +1,5 @@
 from settings.get import get_core_path
+from settings.get import get_attributes
 
 class Paths:
     def __init__(self):
@@ -14,4 +15,7 @@ class Settings:
 
 def get_settings():
     paths = Paths()
-    paths.settings = get_core_path()
+    get_core_path(paths)
+    settings = Settings()
+    settings.paths = paths
+    get_attributes(settings)
