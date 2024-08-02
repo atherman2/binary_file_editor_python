@@ -1,4 +1,4 @@
-input=./input
-output=./output
-edited=./edited
+input=./input.txt
+output=./output.txt
+edited=./edited.txt
 mode=r+b
