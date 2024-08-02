@@ -9,12 +9,12 @@ def get_paths(core_path: str, paths_obj: Paths):
         while(setting := settings_file.readline()):
             settings_list.append(setting)
         for setting in settings_list:
-            Paths.input = get_input(setting)
-            # Paths.output = get_output(setting)
-            # Paths.edited = get_edited(setting)
+            Paths.input = get_key_value_from_string(setting, "input")
+            Paths.output = get_key_value_from_string(setting, "output")
+            Paths.edited = get_key_value_from_string(setting, "edited")
 
-def get_input(setting):
-    if setting[:5] == 'input':
-        return setting[6:]
+def get_key_value_from_string(string, key):
+    if string[:len(key)] == key:
+        return string[(len(key)+1):]
     else:
         return None
