@@ -1,17 +1,7 @@
 from settings.get import get_core_path
 from settings.get import get_attributes
-
-class Paths:
-    def __init__(self):
-        self.settings = None
-        self.input = None
-        self.output = None
-        self.edited = None
-
-class Settings:
-    def __init__(self) -> None:
-        self.paths = None
-        self.mode = None
+from settings.classes import Paths
+from settings.classes import Settings
 
 def get_settings():
     paths = Paths()
@@ -19,3 +9,4 @@ def get_settings():
     settings = Settings()
     settings.paths = paths
     get_attributes(settings)
+    return settings
