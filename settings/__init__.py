@@ -1,1 +1,1 @@
-from settings.basic import placeholder
+from settings.controller import Paths
